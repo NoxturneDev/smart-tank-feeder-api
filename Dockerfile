@@ -1,5 +1,8 @@
 # Dockerfile
-FROM golang:1.21-alpine AS builder
+FROM golang:1.22-alpine AS builder
+
+# Install build dependencies for SQLite
+RUN apk add --no-cache gcc musl-dev sqlite-dev
 
 WORKDIR /app
 COPY go.mod go.sum ./
