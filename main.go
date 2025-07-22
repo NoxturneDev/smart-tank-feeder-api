@@ -30,7 +30,7 @@ type FeedingSchedule struct {
 	FoodType string `json:"foodType"`
 	FishID   int    `json:"fishId"`
 	FishName string `json:"fishName" db:"name"` // New field
-//}
+}
 
 // Database connection
 var db *sql.DB
